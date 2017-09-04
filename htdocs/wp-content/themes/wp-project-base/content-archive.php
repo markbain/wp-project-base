@@ -19,10 +19,10 @@
 	$is_featured_custom_field = $post_type . '_featured';
 	$is_featured = get_field( $is_featured_custom_field );
 
-	if ( ( $is_featured == TRUE || $post_type == 'book' ) ) {
-		$post_link = $post_link_internal; // Featured posts always link internal
+	if ( ( $is_featured == FALSE && $post_link_external == TRUE ) ) {
+		$post_link = $post_link_external; // Featured posts always link internal
 	} else {
-		$post_link = $post_link_external;
+		$post_link = $post_link_internal;
 	}
 
 
