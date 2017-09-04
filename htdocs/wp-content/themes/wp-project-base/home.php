@@ -1,5 +1,10 @@
 <?php 
 
+	$title = '';
+	if ( get_field( 'post_archive_title', 'option' ) ) {
+		$title = get_field( 'post_archive_title', 'option' );
+	}
+
 	get_header();
 	do_action( 'baindesign_blog_archive' ); 
 
@@ -7,13 +12,7 @@
 <div id="post-header" class="section">
 	<div class="container">
 		<h1 class="page-title">
-			<?php
-				$title = '';
-				if ( get_field( 'post_archive_title', 'option' ) ) {
-					$title = get_field( 'post_archive_title', 'option' );
-				}
-				echo $title;
-			?>
+			<?php echo $title; ?>
 		</h1>
 
 		<?php
