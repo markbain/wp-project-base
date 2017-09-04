@@ -10,7 +10,7 @@
 	if ( $archive_title ) {
 		$title = $archive_title;
 	} else {
-		$title = the_archive_title();
+		$title = get_the_archive_title();
 	}
 
 	// Post date
@@ -71,36 +71,24 @@
 			if ( is_post_type_archive( 'testimonial' ) ) {
 				if ( get_field( 'testimonial_archive_intro', 'option' ) ) {
 					$intro = get_field( 'testimonial_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
 				} 	 
 			} elseif ( is_post_type_archive( 'book' ) ) {
 				if ( get_field( 'book_archive_intro', 'option' ) ) {
 					$intro = get_field( 'book_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
 				} 	 
 			} elseif ( is_post_type_archive( 'talk' ) ) {
 				if ( get_field( 'talk_archive_intro', 'option' ) ) {
 					$intro = get_field( 'talk_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
 				} 	 
 			} elseif ( is_post_type_archive( 'project' ) ) {
 				if ( get_field( 'project_archive_intro', 'option' ) ) {
 					$intro = get_field( 'project_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
 				} 	 
 			} elseif ( is_post_type_archive( 'article' ) ) {
 				if ( get_field( 'article_archive_intro', 'option' ) ) {
 					$intro = get_field( 'article_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
 				} 
-			} else {
-				$intro = get_the_archive_description();
-			} 
+			}
 
 		   	if ( $intro ) {
 		    	echo '<div class="intro">' . $intro . '</div>';
