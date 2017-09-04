@@ -1,0 +1,7 @@
+{
+  "theme_name":     	"wp-project-base",
+  "theme_path":     	"htdocs/wp-content/themes",
+  "plugin_name":    	"wp-project-base-plugin",
+  "plugin_path":    	"htdocs/wp-content/plugins",
+  "mu_plugin_path":    	"htdocs/wp-content/mu-plugins"
+}

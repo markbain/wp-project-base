@@ -1,0 +1,33 @@
+#masthead {
+	.container {
+		display: table;
+		.site-branding, 
+		#main-nav-wrapper {
+			display: table-cell;
+			vertical-align: middle; 
+			width: auto;
+		}
+		.site-branding {
+			width: 100%;
+			@include breakpoint( $tablet ) {
+				width: auto;
+			}
+			// Prevent multi-word site titles from wrapping
+			white-space: nowrap;
+			.site-logo {
+				text-align: left;
+			}
+		}				 
+		#main-nav-wrapper {
+			@include breakpoint( $tablet ) {
+				width: 100%;
+			}
+			ul {
+				text-align: center; 
+				@include breakpoint( $tablet ) {
+					text-align: right;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+// Styles for Style Guide template
+
+.color-swatch {
+	list-style-type: none;
+	color: #fff;
+	padding: ms(2);
+	background-color: #eee;
+	display: inline-block;
+	
+	.color-primary & {
+		background-color: $color-primary;
+		&.tinted {background-color: $color-primary-tinted;}
+		&.super-tinted {background-color: $color-primary-super-tinted;}
+		&.ultra-tinted {background-color: $color-primary-ultra-tinted;}
+		&.shaded {background-color: $color-primary-shaded;}
+		&.super-shaded {background-color: $color-primary-super-shaded;}
+		&.ultra-shaded {background-color: $color-primary-ultra-shaded;}
+	}
+
+	.color-complement & {
+		background-color: $color-complement;
+		&.tinted {background-color: $color-complement-tinted;}
+		&.super-tinted {background-color: $color-complement-super-tinted;}
+		&.ultra-tinted {background-color: $color-complement-ultra-tinted;}
+		&.shaded {background-color: $color-complement-shaded;}
+		&.super-shaded {background-color: $color-complement-super-shaded;}
+		&.ultra-shaded {background-color: $color-complement-ultra-shaded;}
+	}
+
+	.color-secondary-1 & {
+		background-color: $color-secondary-1;
+		&.tinted {background-color: $color-secondary-1-tinted;}
+		&.super-tinted {background-color: $color-secondary-1-super-tinted;}
+		&.ultra-tinted {background-color: $color-secondary-1-ultra-tinted;}
+		&.shaded {background-color: $color-secondary-1-shaded;}
+		&.super-shaded {background-color: $color-secondary-1-super-shaded;}
+		&.ultra-shaded {background-color: $color-secondary-1-ultra-shaded;}
+	}
+
+	.color-secondary-2 & {
+		background-color: $color-secondary-2;
+		&.tinted {background-color: $color-secondary-2-tinted;}
+		&.super-tinted {background-color: $color-secondary-2-super-tinted;}
+		&.ultra-tinted {background-color: $color-secondary-2-ultra-tinted;}
+		&.shaded {background-color: $color-secondary-2-shaded;}
+		&.super-shaded {background-color: $color-secondary-2-super-shaded;}
+		&.ultra-shaded {background-color: $color-secondary-2-ultra-shaded;}
+	}
+
+	.color-secondary-3 & {
+		background-color: $color-secondary-3;
+		&.tinted {background-color: $color-secondary-3-tinted;}
+		&.super-tinted {background-color: $color-secondary-3-super-tinted;}
+		&.ultra-tinted {background-color: $color-secondary-3-ultra-tinted;}
+		&.shaded {background-color: $color-secondary-3-shaded;}
+		&.super-shaded {background-color: $color-secondary-3-super-shaded;}
+		&.ultra-shaded {background-color: $color-secondary-3-ultra-shaded;}
+	}
+
+	.color-neutral & {
+		background-color: $color-neutral;
+		&.tinted {background-color: $color-neutral-tinted;}
+		&.super-tinted {background-color: $color-neutral-super-tinted;}
+		&.ultra-tinted {background-color: $color-neutral-ultra-tinted;}
+		&.shaded {background-color: $color-neutral-shaded;}
+		&.super-shaded {background-color: $color-neutral-super-shaded;}
+		&.ultra-shaded {background-color: $color-neutral-ultra-shaded;}
+	}
+
+	.color-neutral-2 & {
+		background-color: $color-neutral-2;
+		&.tinted {background-color: $color-neutral-2-tinted;}
+		&.super-tinted {background-color: $color-neutral-2-super-tinted;}
+		&.ultra-tinted {background-color: $color-neutral-2-ultra-tinted;}
+		&.shaded {background-color: $color-neutral-2-shaded;}
+		&.super-shaded {background-color: $color-neutral-2-super-shaded;}
+		&.ultra-shaded {background-color: $color-neutral-2-ultra-shaded;}
+	}
+
+}

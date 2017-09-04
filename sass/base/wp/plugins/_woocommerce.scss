@@ -1,0 +1,45 @@
+#woocommerce_product_meta {
+
+	.price {
+		font-size: ms(2);
+		font-weight: bold;
+		text-align: center; 
+	}
+
+	form {
+		background-color: $color-neutral;
+		padding: 1rem;
+		table {
+			tr {
+
+			}
+			.label {
+				width: 20%;
+			}
+		}
+
+		select {
+			width: 80%;
+			padding: 4px;
+			background: $bright-white;
+	   		border: none;
+	   		margin-bottom: 10px;
+	   	}
+	}
+
+	.woocommerce-variation-add-to-cart {
+		display: table;
+		.quantity {
+			display: table-cell;			
+			input {
+				padding: .618em 1em;
+				border: none;
+				background: $bright-white;
+			}
+		} 
+		button {
+			display: table-cell;
+			margin-left: 10px;
+		}
+	}
+}

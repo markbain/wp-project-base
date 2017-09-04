@@ -1,0 +1,15 @@
+.reviewer_link {
+	display: block; 
+	text-align: left;
+	&:link,&:visited,&:hover,&:active  {
+		@include border-reset;
+	}
+}
+.review_description { @extend .reviewer_link; }
+.reviewer_image { 
+	@extend .reviewer_link;
+	width: $icon-width-large;
+	img {
+		@include border-radius($icon-width-large);
+	} 
+}

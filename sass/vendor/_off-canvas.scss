@@ -1,0 +1,134 @@
+#site-wrapper {
+    overflow-x: hidden;
+}
+#offcanvas-nav { 
+	// z-index: 2; /* Can't use z-index to hide the corner ribbon; it affects the transition effect on off-canvas.
+	a {
+		&:hover {
+			border-bottom: none;
+			color: #000;
+		}
+
+		&.mm-next {
+			&:hover {
+				background-color: rgba(0,0,0,.1);
+			}
+		}
+	}
+}
+.corner-triangle {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    
+    &.sticky {
+        position: fixed;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 3;
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    &::before {
+        border-width: 33px;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        z-index: 4;
+    }
+
+    &.corner-triangle-top-left {
+        top: 0;
+        left: 0;
+        &::before,
+        &::after {
+            top: 0;
+            left: 0;
+        }
+        &::before {
+            border-left-color: $black;
+            border-top-color: $black;
+        }
+    }
+
+    &.corner-triangle-top-right {
+        top: 0;
+        right: 0;
+        &::before,
+        &::after {
+            top: 0;
+            right: 0;
+        }
+        &::before {
+            // border-right-color: $color_gold;
+            // border-top-color: $color_gold;
+        }
+        span {
+           top: 0;
+           right: 0;
+        }
+    }
+
+    a#offcanvas-nav-trigger {
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	padding: 9px;
+    	text-align: left;
+    	color: $white;
+    	z-index: 4;
+    	font-size: 12px;
+    	&:link, &:visited {
+    		opacity: .8;
+    	}
+    	&:hover {
+    		opacity: 1;
+    		border-bottom: none;
+    	}
+    	&:active {
+    		opacity: .6;
+    	}
+    }
+}
+#offcanvas-nav:not( .mm-menu ) {
+   display: none;
+}
+
+#beta-notice {
+    opacity: .8;
+    span {
+        color: $white;
+        transform: rotate(45deg);
+        text-align: center;
+        line-height: 45px;
+        width: 40px;
+    }
+}
+
+
+
+.mm-menu .menu li {
+    text-align: left;
+    border-bottom: none;
+}
+.mm-listview>li, .mm-listview>li .mm-next, .mm-listview>li .mm-next:before, .mm-listview>li:after {
+    border-color: rgba(0,0,0,0.1);
+}
+
+html.mm-pagedim-black.mm-opening #mm-blocker,
+html.mm-pagedim-white.mm-opening #mm-blocker,
+html.mm-pagedim.mm-opening #mm-blocker{
+    opacity: 0.3;
+    -webkit-transition: opacity .4s linear !important;
+    transition: opacity .4s linear !important;
+}

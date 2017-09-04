@@ -1,0 +1,77 @@
+#preheader {
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: ms(1); 
+	
+	.container {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		@include breakpoint( $tablet ) {
+			padding-top: 5px;
+			padding-bottom: 5px;			
+		}
+	}
+
+	a {
+		padding: 0;
+	}
+
+	#switcher, 
+	#preheader-social {
+		display: inline-block;
+		a {
+			display: inline-block;
+			
+			border-bottom: none;
+		}
+		i {
+			font-size: ms(3); 
+		}
+	}
+	 #preheader-social {
+		@include breakpoint( $tablet ) {
+			padding-left: 5%; 
+		}
+		a {
+			@include breakpoint( $tablet ) {
+				padding: .2rem 0 .2rem .5rem; // Align right
+			}	
+		}
+	}
+
+	#switcher {
+		#language-selector {
+			ul {
+				@extend %no-bullets;
+				float: left;
+				li {
+					text-align: center;
+					margin-bottom: 5px; 
+					@include breakpoint( $tablet ) {
+						display: inline;
+						margin-left: 10px;
+						margin-bottom: 0;
+					}
+					a {
+						@include button( $color-complement );
+						@include breakpoint( $tablet-horizontal ) {
+							@include button( $color-complement, nano );
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint( $tablet ) {
+		text-align: right;	
+	}
+}
+
+// Preheader 
+#preheader {
+	.social {
+		font-size: 1.5rem;
+	}
+}

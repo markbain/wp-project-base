@@ -1,0 +1,61 @@
+.indicator {
+	display: block;
+	width: auto;
+	@include center-block;
+	@include circle( 2em, transparent );
+	border: 1px solid $black;
+	&> span {
+		display: inline-block;
+		height: 100%;
+	}
+	i {
+		display: block;
+		@extend %vertical-align;
+		font-size: 1.3em;
+	}
+	&.left {
+
+	}
+	&.right {
+		&::before {
+			content: $icon-font-right;
+		}
+	}
+	&.up {
+
+	}
+	&.down {
+
+	}
+}
+
+.nav-toggle {
+ 	display: table-cell;
+ 	vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    @include breakpoint( $tablet ) {
+    	display: none;
+    }
+    & .no-js {
+		display: none; // Don't show the toggle, it won't work.
+	}
+    a {
+    	&:link {
+    		body.cover-content-color-dark & {
+	    		color: $cover-content-color-dark;
+	    	}
+	    	body.cover-content-color-light & {
+				color: $cover-content-color-light;
+	    	}
+	    }
+    	&:hover {
+    		body.cover-content-color-dark & {
+	    		color: rgba( $cover-content-color-dark, 0.5);
+	    	}
+	    	body.cover-content-color-light & {
+				color: rgba( $cover-content-color-light, 0.5);
+	    	}
+	    }
+    }
+}

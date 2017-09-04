@@ -1,0 +1,92 @@
+html { 
+
+	// Adjust the base font size depending on the context
+	font-size: font-boost( 0.85 );
+	@include breakpoint( $mobile ){ font-size: font-boost( 0.9 ); } 
+	@include breakpoint( $mobile-horizontal ){ font-size: font-boost( 0.95 ); } 
+	@include breakpoint( $tablet ){ font-size: font-boost( 1 ); }
+	@include breakpoint( $tablet-horizontal ){ font-size: font-boost( 1.05 ); }
+	@include breakpoint( $desktop ){ font-size: font-boost( 1.08 ); } 
+	// @include breakpoint( $desktop-wide ){ font-size: font-boost( 1.1 ); }
+}
+
+body { font-family: $base-font-stack; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $alt-font-stack;
+	line-height: 1.25em;
+	font-weight: bold;
+	margin: 0 0 .49em;
+	// Set explicit margins to avoid browser defaults
+	margin: 0 0 1em 0;
+}
+
+h1 { @extend .h1 !optional; }
+h2 { @extend .h2 !optional; }
+h3 { @extend .h3 !optional; }
+h4 { @extend .h4 !optional; }
+h5 { @extend .h5 !optional; }
+h6 { @extend .h6 !optional; }
+	
+small, .font_small { font-size: ms(0); }
+body{ font-size: ms(1);
+}
+
+.h6 {
+	font-size: ms(2);
+	.cover & {
+		font-size: ms(5);
+	}
+}
+.h5 {
+	font-size: ms(3);
+	.cover & {
+		font-size: ms(6);
+	}
+}
+.h4 {
+	font-size: ms(4);
+	.cover & {
+		font-size: ms(7);
+	}
+}
+.h3 {
+	font-size: ms(5);
+	.cover & {
+		font-size: ms(8);
+	}
+}
+.h2 {
+	font-size: ms(6);
+	.cover & {
+		font-size: ms(9);
+	}
+}
+.h1 {
+	font-size: 3.5rem;
+}
+
+.h6-reset {
+	@extend .h6;
+	@include margin-reset;
+}
+.h5-reset {
+	@extend .h5;
+	@include margin-reset;
+}
+.h4-reset {
+	@extend .h4;
+	@include margin-reset;
+}
+.h3-reset {
+	@extend .h3;
+	@include margin-reset;
+}
+.h2-reset {
+	@extend .h2;
+	@include margin-reset;
+}
+.h1-reset {
+	@extend .h1;
+	@include margin-reset;
+}

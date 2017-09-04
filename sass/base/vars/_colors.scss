@@ -1,0 +1,37 @@
+/**
+ *
+ *	Colors
+ *
+ */
+
+$black: 							rgba( 0,0,0,.8) !default;
+$white: 							rgba( 255,255,255,.7) !default;
+
+// Do not use transparency by default for colors 
+// as you cannot always guarantee the background context!
+
+$bright-white: 						#fff !default;
+$grey: 								#eee !default;
+$neutral: $grey;
+
+// Vars
+$color_button:						inherit;
+$color_background-button:			rgba(0,0,0,.1);
+$color_button-hover:				inherit;
+$color_background-button-hover:		rgba(0,0,0,.2);
+$color_button-active:				inherit;
+$color_background-button-active:	rgba(0,0,0,.3);
+
+
+// Links
+$color_text-anchor:					rgba( 0,0,0,.5) !default; 
+$color_text-anchor-visited:			rgba( 0,0,0,.5) !default; 
+$color_text-anchor-hover:			rgba( 0,0,0,1) !default; 
+$color_text-anchor-active:			rgba( 0,0,0,.75) !default; 
+
+$cover-content-color-light: rgba(255,255,255,0.8);
+$cover-content-color-dark: rgba(0,0,0,0.6);
+
+// Base colors
+
+$color-alert: #ff9890;

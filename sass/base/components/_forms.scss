@@ -1,0 +1,173 @@
+/* =========================================================================
+   Forms
+   ========================================================================= */
+	
+	// Comments
+	// Sign up i.e. MailChimp, Subscribe by Email
+	// Contact i.e. Contact Form 7
+
+form {
+	// Set up the grid
+	@include add-grid( $grid );
+	@include add-gutter( $gutter );
+	@include sgs-change('output', 'float');
+	text-align: left; /* Forms always look better left aligned. */
+	label {
+		// @extend .visuallyhidden !optional;
+	}
+
+	select {
+		text-align: center;
+		align-items: center;
+		@include breakpoint( $mobile ) {
+			text-align: left;
+			align-items: left;
+		}
+	}
+
+	&#commentform {
+		p {
+			width: 100%;
+			@include breakpoint( $mobile-horizontal ){
+				&.username {
+					@include grid-span(8, 1);
+				}
+				&.emailaddress {
+					@include grid-span(8, 9);
+				}
+				&.url {
+					@include grid-span(8, 17);
+				}	
+				&.comment-form-comment {
+					@include grid-span(24, 1);
+				}
+				&.form-submit {
+					@include grid-span(24, 1);
+				}
+			}
+		}
+	}
+	&#mc-embedded-subscribe-form {
+		display: table;
+		div {
+			@include breakpoint( $mobile-horizontal ){
+				&.username {
+					width: 33.333%;
+					display: table-cell;
+					padding-right: 10px;
+				}
+				&.username-last {
+					width: 33.333%;
+					display: table-cell;
+					padding-right: 10px;
+				}
+				&.emailaddress {
+					width: 33.333%;
+					display: table-cell;
+					padding-right: 10px;
+				}
+				&.signin { /* The sign up button */
+					display: block;
+					width: 100%;
+					@include breakpoint( $mobile ) {
+						display: table-cell;
+						width: auto;
+					}
+					@include breakpoint( $tablet ) {
+						margin: 0;
+						padding: 0;
+						vertical-align: bottom;
+						input {
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.inline-a {
+	@include inline-form(3);
+}
+.inline-b {
+	@include inline-form(2);
+}
+
+// Input
+
+input {
+	padding: $input-padding;
+	border: none;
+	width: auto;
+	background-color: rgba(255, 255, 255, .2);
+	border: 1px solid rgba(0,0,0,.3);
+	color:  $black;
+
+	&:focus {
+		background-color: rgba(255, 255, 255, .7);
+		@include transition(all, 0.3s, ease-in-out);
+	}
+
+	&[type=submit] {
+		&.search-submit {
+			display: none;
+		}
+	}
+	
+	&[type=submit],
+	&[type=reset] {
+		@include button();
+		color: $color_button;	
+		background: $color_background-button;		
+	}
+
+	&[type=password],
+	&[type=email],
+	&[type=text],
+	&[type=url],
+	&[type=search]  {
+		width: 100%;
+	}
+	&[type=file] {
+		padding: 0;
+		background: none;
+	}
+	&[type=number]::-webkit-inner-spin-button {
+		/** 
+		 * Always show the spinner buttons in Chrome.
+		 * This is default behaviour in FF/Safari.
+		 */
+	    opacity: 1
+	}
+}
+
+// Hide the search button
+
+
+// Textarea
+
+textarea {
+	@extend input;
+	width: 100%;
+}
+
+// Placeholders
+::-webkit-input-placeholder {
+	color: rgba(0,0,0,.4);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: rgba(0,0,0,.4);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: rgba(0,0,0,.4); 
+}
+
+:-ms-input-placeholder {  
+	color: rgba(0,0,0,.4); 
+}

@@ -1,0 +1,104 @@
+# =========================
+# Project root folders
+# =========================
+.sass-cache
+bin
+bower_components
+export
+import
+node_modules
+release
+releases
+
+htdocs/wp-content/themes/wp-project-base/assets/js/dist/custom/modernizr-custom.js
+
+# =========================
+# Sass projects
+# =========================
+
+# If you are using _just_ Sass, you probably don't want to commit _any_ 
+# compiled .css
+# 
+*.css
+
+# Ignore everything in the "sass" directory except the files and
+# directories you specify.
+sass/*
+!sass/base
+!sass/theme_*
+!sass/vendor
+!sass/*.scss
+
+# =========================
+# VIM Temp Files
+# =========================
+*~
+*.swp
+
+# =========================
+# WordPress 
+# =========================
+
+
+
+# Ignore everything in the "htdocs" directory except the "wp-content" directory.
+htdocs/*
+!htdocs/wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+htdocs/wp-content/*
+!htdocs/wp-content/plugins/
+!htdocs/wp-content/themes/
+!htdocs/wp-content/mu-plugins/
+ 
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+htdocs/wp-content/plugins/*
+!htdocs/wp-content/plugins/wp-project-base-plugin/
+
+# Ignore everything in the "mu-plugins" directory, except the mu-plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+htdocs/wp-content/mu-plugins/*
+!htdocs/wp-content/mu-plugins/load.php
+ 
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+htdocs/wp-content/themes/*
+!htdocs/wp-content/themes/wp-project-base/
+
+
+# =========================
+# Operating System Files
+# =========================
+
+# Windows
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+*.map
+
+# Misc
+*.zip
+*.tar
+*.gz
+*.sql
+*.sublime-*
+*.yml
+*.orig
+*.log
+.DS_Store

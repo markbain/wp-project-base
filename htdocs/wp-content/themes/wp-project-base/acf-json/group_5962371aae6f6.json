@@ -1,0 +1,63 @@
+{
+    "key": "group_5962371aae6f6",
+    "title": "Talk description",
+    "fields": [
+        {
+            "key": "field_5962371ab1b1c",
+            "label": "Talk detailed description",
+            "name": "talk_description_detailed",
+            "type": "wysiwyg",
+            "instructions": "Embed video here (if applicable)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_5962371ab1bce",
+            "label": "Talk excerpt",
+            "name": "book_excerpt",
+            "type": "text",
+            "instructions": "A short description of the talk, for use on list or archive pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "talk"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1499608930
+}

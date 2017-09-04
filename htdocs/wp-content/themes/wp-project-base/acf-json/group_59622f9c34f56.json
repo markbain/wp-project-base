@@ -1,0 +1,63 @@
+{
+    "key": "group_59622f9c34f56",
+    "title": "Project description",
+    "fields": [
+        {
+            "key": "field_5962303366ee8",
+            "label": "Project detailed description",
+            "name": "project_description_detailed",
+            "type": "wysiwyg",
+            "instructions": "A detailed description of the item, for use on the main page for this item.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_596231754a5af",
+            "label": "Project excerpt",
+            "name": "project_excerpt",
+            "type": "text",
+            "instructions": "A short description of the item, for use on list or archive pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1499607678
+}

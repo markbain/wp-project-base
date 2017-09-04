@@ -1,0 +1,102 @@
+{
+    "key": "group_596232e9862b8",
+    "title": "Book details",
+    "fields": [
+        {
+            "key": "field_596232e989399",
+            "label": "Book image",
+            "name": "book_image",
+            "type": "image",
+            "instructions": "A thumbnail image for this item.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_596232e989431",
+            "label": "Book completion date",
+            "name": "book_date",
+            "type": "date_picker",
+            "instructions": "The date this item was completed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_596232e9894c4",
+            "label": "Book publisher",
+            "name": "book_publisher",
+            "type": "text",
+            "instructions": "The name of the publisher of this book. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_596232e989557",
+            "label": "Publisher URL",
+            "name": "book_publisher_url",
+            "type": "url",
+            "instructions": "Provide a link here if you want to link to the publisher's external site. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "book"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1503916793
+}

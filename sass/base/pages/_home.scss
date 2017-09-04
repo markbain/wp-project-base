@@ -1,0 +1,10 @@
+#intro {
+	margin: 0;
+}
+.home {
+	.latest-posts {
+		.container {
+			@extend %mo-paradigm-2;
+		}
+	}
+}
