@@ -1,0 +1,36 @@
+// Structure
+
+$container-width: 60rem !default;
+$container-width_medium: 75rem !default;
+$container-width_narrow: 50rem !default;
+
+$pageWidth: 						100% !default;
+$block-padding: 					1em 10% !default;
+$side-padding: 						0 10% !default;
+$width_menu-item: 					199px !default; // Dropdown menu needs fixed width for positioning
+$input-padding: 					1em 10px !default;
+$input-border-radius: 				5px !default;
+
+// Section padding
+$section-padding: 2rem 5% !default;
+$section-padding-top: 3em !default;
+$section-padding-bottom: 3em !default;
+$section-padding-left: 5% !default;
+$section-padding-right: 5% !default;
+
+// Input padding
+$input-padding-peta: 	1.44rem !default;
+$input-padding-giga: 	1.33rem !default;
+$input-padding-mega: 	1.22rem !default;
+$input-padding-kilo: 	0.77rem !default;
+$input-padding-default: 0.66rem !default;
+$input-padding-micro: 	0.33rem 0.55rem !default;
+$input-padding-nano: 	0.11rem 0.33rem !default;
+$input-padding-pico: 	0rem 0.22rem !default;
+
+// Search toggle width
+$search-toggle-width: 				30px;	
+
+// Feature image sizes
+$size-square-width: 328px;
+$size-square-height: 328px;

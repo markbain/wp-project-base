@@ -1,0 +1,362 @@
+{
+    "key": "group_587e5a9d68a7f",
+    "title": "Templates",
+    "fields": [
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_589320bcfe6e9",
+            "label": "Course ID",
+            "name": "course_id",
+            "type": "text",
+            "instructions": "Enter the ID of the content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58c01f29afc40",
+            "label": "Quiz Shortcode",
+            "name": "quiz_shortcode",
+            "type": "text",
+            "instructions": "Copy\/paste the shortcode for the quiz. \r\ne.g. <code>[WpProQuiz 1]<\/code>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
+            "key": "field_58b9799c776fb",
+            "label": "Content Summary",
+            "name": "content_summary",
+            "type": "wysiwyg",
+            "instructions": "Summary",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "layouts": [
+                {
+                    "key": "587e5aea042ea",
+                    "name": "text",
+                    "label": "Text",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "choices": {
+                                "1": "1",
+                                "2": "2",
+                                "3": "3"
+                            },
+                            "default_value": {
+                                "1": "1",
+                                "2": "2",
+                                "3": "3"
+                            },
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "return_format": "value",
+                            "key": "field_587f3360ddef6",
+                            "label": "Column Count",
+                            "name": "columns",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 10,
+                                "class": "",
+                                "id": ""
+                            },
+                            "disabled": 0,
+                            "readonly": 0
+                        },
+                        {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
+                            "key": "field_587e5b8525254",
+                            "label": "Content",
+                            "name": "col_1",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 90,
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "58878114cd563",
+                    "name": "callout",
+                    "label": "Callout Text",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
+                            "key": "field_58878114cd565",
+                            "label": "Callout Content",
+                            "name": "callout_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 100,
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "587f395bacdf8",
+                    "name": "case_study",
+                    "label": "Case Study",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587f4a5d47fd3",
+                            "label": "Case Study Header",
+                            "name": "case_study_header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
+                            "key": "field_587f39bdacdf9",
+                            "label": "Case Study Text",
+                            "name": "case_study_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "587f3afbf6243",
+                    "name": "quotation",
+                    "label": "Quotation",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587f3b06f6244",
+                            "label": "Quote Text",
+                            "name": "quote_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_587f3b26f6245",
+                            "label": "Quote Source &mdash; Name",
+                            "name": "quote_source_name",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "587f406321307",
+                    "name": "checklist",
+                    "label": "Checklist",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "sub_fields": [
+                                {
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "key": "field_587f408721309",
+                                    "label": "Checklist Item Text",
+                                    "name": "checklist_item_text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 50,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "key": "field_587f40a02130a",
+                                    "label": "Checklist Item URL",
+                                    "name": "checklist_item_url",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 50,
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                }
+                            ],
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Adicionar Linha",
+                            "collapsed": "",
+                            "key": "field_587f406d21308",
+                            "label": "Checklist Item",
+                            "name": "checklist_item",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ],
+            "min": "",
+            "max": "",
+            "button_label": "Adicionar Linha",
+            "key": "field_587e5ab3edf7d",
+            "label": "Content Blocks",
+            "name": "content_blocks",
+            "type": "flexible_content",
+            "instructions": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend Leo.<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "content_cpt"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1488986181
+}

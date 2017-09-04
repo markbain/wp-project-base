@@ -1,0 +1,10 @@
+.menu {
+	// Make it a line
+	text-align: center;
+	li {
+		@include breakpoint( $tablet ) {
+			display: inline;
+			margin: 0 0 0 1rem;
+		}
+	}
+}

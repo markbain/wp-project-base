@@ -1,0 +1,8 @@
+.menu {
+	// Remove bullets, or it's just a list FFS
+	padding: 0;
+	list-style-type: none;
+	li {
+		text-align: center;
+	}
+}

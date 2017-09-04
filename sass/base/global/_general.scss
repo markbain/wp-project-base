@@ -1,0 +1,497 @@
+/* ==========================================================================
+   Border-box all the things!
+   ========================================================================== */
+
+*,
+:before,
+:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+html {
+	line-height: 1.5;
+	overflow-y: scroll !important;
+}
+
+body {
+	color: $color_text;
+	background-color: $white;
+	
+	text-align: left;
+	// I have toyed with the idea of the default
+	// being center, but text just isn't designed
+	// to be read when centered, at least not on
+	// the web (yet).
+}
+
+::-moz-selection {
+	background: $color_text-selection;
+}
+
+::selection {
+	background: $color_text-selection;
+}
+
+header, p, ul, ol {
+	margin: 0 0 1.15em 0;
+	// Set explicit margins for everything to avoid browser defaults
+}
+
+i {
+	color: inherit;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+    background-image: linear-gradient(to bottom, transparent 0, lighten( $color_text-anchor, 30% ) 1px, transparent 0);
+    background-size: 1px 5px;
+    background-repeat: repeat-x;
+    background-position: 0 1em;
+	text-decoration: none;
+	@include transition(all, 0.3s, ease-in-out);
+
+	&:link {
+		color: $color_text-anchor;
+		@include transition(all, 0.3s, ease-in-out);
+	}
+	&:visited {
+		color: $color_text-anchor;
+		@include transition(all, 0.3s, ease-in-out);
+	}
+	&:hover {
+		color: $color_text-anchor-hover;
+	    background-image: linear-gradient(to bottom, transparent 0, $color_text-anchor-hover 1px, transparent 0);
+		@include transition(all, 0.3s, ease-in-out);
+	}
+
+	// External links
+	&[rel~="external"]:after {
+		font-family: "FontAwesome";
+    	content: $icon-font-link-external;
+    	padding-left: $icon-font-nav-padding; 
+	}
+
+	&.medium:after {
+		font-family: "FontAwesome";
+		padding-left: 0.5rem;
+		content: '\f23a'; // &rarr;
+	}
+	&.linkedin:after {
+		font-family: "FontAwesome";
+		padding-left: 0.5rem;
+		content: '\f0e1'; // &rarr;
+	}
+	&.etsy:after {
+		font-family: "FontAwesome";
+		padding-left: 0.5rem;
+		content: '\f2d7'; // &rarr;
+	}
+}
+
+%light-links {
+	border-bottom-color: $white;
+	&:link {
+		color: $white;
+	}
+	&:visited {
+		color: $white;
+	}
+	&:hover {
+		color: $white;
+		border-bottom-color: $white;
+	}
+}
+
+
+/* ==========================================================================
+   
+   Images, figures, captions, svgs...
+   
+   ========================================================================== */
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	margin: 0 auto;
+	padding: 0;
+	
+	@include breakpoint( $mobile-horizontal ) {
+		width: auto;
+		margin: 0;
+	}
+
+	// Floating images on small screens doesn't generally look good, so enable it only at higher widths.
+	
+	&.alignleft,
+	&.alignright, 
+	&.aligncenter {
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.alignleft {
+		@include breakpoint( $mobile-horizontal ) {
+			display: inline;
+			float: left;
+			margin-right: 1.5em;
+		}
+	}
+	&.alignright {
+		@include breakpoint( $mobile-horizontal ) {
+			display: inline;
+			float: right;
+			margin-left: 1.5em;
+		}
+	}
+	&.aligncenter {
+		@include breakpoint( $mobile-horizontal ) {
+			clear: both;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.svg {
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+figure {
+	margin: 0;
+	img {
+		max-width: 100%;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		border-bottom: none;
+		background-image: none;
+		&:hover {
+			text-decoration: none;
+			border-bottom: none;
+			background-image: none;
+		}
+	}
+}
+figcaption {
+
+	font-size: ms(0);
+	margin: 0 0 1rem 0;
+	padding: 0.5rem $section-padding-left;
+	font-style: italic;
+
+	@include breakpoint( $tablet ) {
+		/* Remove padding on desktop */
+		padding: 0.5rem 0 0 0; 
+	}
+	
+	a {
+		display: inline;
+	}
+}
+
+blockquote {
+	font-size: 1.5rem;
+	margin: 0 0 1.5rem;
+	padding: 0;
+	&.fancy {
+		@extend .h4 !optional;
+		font-weight: 500;
+		margin: 0 0 2em 0;
+		// font-style: italic;
+		position: relative;
+		&:before {
+			@extend .h1;
+			content: '';
+			line-height: 1;
+			position: absolute;
+			text-align: center;
+			left: -9px; /* Hand made :) */
+			width: 100%;
+			@include breakpoint( $tablet ){
+				position: relative;
+				padding: 0;
+				font-family: sans-serif;
+				font-style: normal;
+				font-size: 8em;
+				height: 40px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	p {
+		@include breakpoint( $tablet ){
+		}
+	}
+}
+.blockquote-fancy {
+	position: relative; 
+	&:before {
+		@extend .h1;
+		content: open-quote;
+		line-height: 1;
+		width: 100%;
+		@include breakpoint( $tablet ){
+			position: absolute;
+			top: 0;
+			left: -1em; /* Hand made :) */
+		}
+	}
+}
+address {
+	margin: 0 0 1.5em;
+}
+
+.amp {
+	font-family: Baskerville, Palatino, "Book Antiqua", sans-serif;
+	font-style: italic;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+ul, 
+ol {
+	padding: 0 0 1rem 1rem;
+	li {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+	ul, 
+	ol {
+		margin-left: 1.5rem;
+		padding: 0;
+	}
+	&.no-bullets { // also available as @extend
+		margin: 0; 
+		padding: 0;
+		list-style-type: none;
+		text-align: inherit;
+	}
+	&.inline {
+		li {
+			display: inline;
+		}
+	}
+}
+
+.list_flush {
+	ol, ul {
+		display: table;
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none; 
+		li {
+			display: table-row;
+			&:before {
+				content: "";
+				display: table-cell;
+				padding-right: 0.3em;
+				text-align: right;
+			}
+		}
+	}
+}
+.list_flush_menu {
+	@include breakpoint( $tablet ) {
+		ol, ul {
+			display: table;
+			margin-left: 0;
+			padding-left: 0;
+			list-style: none; 
+			li {
+				a > span {
+					display: table;
+					width: 100%;
+					span {
+						display: table-cell;
+						width: 80%;
+					}
+					span:first-child {
+						width: 20%;
+						text-align: right;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+	
+
+/* ==========================================================================
+   Alignment
+   ========================================================================== */
+
+.alignleft,
+.alignright, 
+.aligncenter {
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	@include breakpoint( $mobile-horizontal ) {
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+	}
+}
+.alignright {
+	@include breakpoint( $mobile-horizontal ) {
+		display: inline;
+		float: right;
+		margin-left: 1.5em;
+	}
+}
+.aligncenter {
+	@include breakpoint( $mobile-horizontal ) {
+		clear: both;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+/* ==========================================================================
+   Accessiblity
+   ========================================================================== */
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* ==========================================================================
+   Clearings
+   ========================================================================== */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+
+/* ==========================================================================
+   Infinite Scroll
+   ========================================================================== */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	font-style: normal;
+}
+
+.card {
+	padding: 1rem;
+	background-color: $neutral;
+	@include border-radius($input-border-radius);
+}
+
+/*
+ * Hide elements, depending on screen size
+ */
+
+.show-on-desktop-only {
+    display: none;
+    @include breakpoint( $tablet ) {
+        display: block;
+    } 
+}
+.show-on-mobile-only {
+    @include breakpoint( $tablet ) {
+        display: none;
+    } 
+}
+
+/**
+ * Overlay
+ */
+
+.overlay {
+	content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    .cover-content-color-dark & {
+    	background-color: rgba(255, 255, 255, 0.2);
+    }
+    .cover-no-background-image & {
+    	display: none; /* Hide the overlay if there is no cover to overlay! */
+    } 
+}

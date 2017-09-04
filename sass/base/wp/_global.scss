@@ -1,0 +1,40 @@
+img {
+
+	&.avatar {
+		width: auto;
+	}
+
+}
+
+.page-links {}
+
+/* Image Captions */
+
+.wp-caption {
+	@extend figure;
+	width: 100% !important;
+	margin-bottom: 1.5rem;
+
+	.wp-caption-text {
+		@extend figcaption;
+	}
+
+	img[class*="wp-image-"] {
+		margin-bottom: 0;
+	}
+}
+
+
+
+.wp-smiley { 
+	max-height: 1em;
+	margin:0 !important;
+}
+
+.gallery dl {
+	margin: 0;
+}
+
+.gallery-caption {
+	margin:-1.5em 0 0 0;
+}

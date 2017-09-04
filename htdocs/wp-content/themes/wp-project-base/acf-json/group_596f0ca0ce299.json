@@ -1,0 +1,118 @@
+{
+    "key": "group_596f0ca0ce299",
+    "title": "Article details",
+    "fields": [
+        {
+            "key": "field_596f0ca0d4e73",
+            "label": "Article date",
+            "name": "article_date",
+            "type": "date_picker",
+            "instructions": "The date this article was published.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_596f0ca0d4f22",
+            "label": "Article client",
+            "name": "article_client",
+            "type": "text",
+            "instructions": "The name of the organization you wrote the article for. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_596f0ca0d4fd1",
+            "label": "Article URL",
+            "name": "article_url",
+            "type": "url",
+            "instructions": "Provide a link here to the external location of the article.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_596f12691b2a7",
+            "label": "Article URL Class",
+            "name": "article_url_class",
+            "type": "text",
+            "instructions": "Add a custom class to the link for a special icon!\r\ne.g. \"medium\", \"linkedin\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5981bb370ac17",
+            "label": "Featured article",
+            "name": "article_featured",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "article"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1503916772
+}

@@ -1,0 +1,298 @@
+{
+    "key": "group_56a0db1bd55b9",
+    "title": "Post\/Page Cover",
+    "fields": [
+        {
+            "key": "field_58db9a1a76edf",
+            "label": "No Cover",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58db98f46e7ff",
+                        "operator": "!=",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This page\/post has no cover.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_58db9613ef87c",
+            "label": "Cover image",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56a0db23a7694",
+            "label": "Cover Image",
+            "name": "cover_image",
+            "type": "image",
+            "instructions": "Add a cover image to this page or post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50%",
+                "class": "alignleft",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "latest-post",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_58ebb8ea3034f",
+            "label": "Cover Content Color",
+            "name": "cover_content_color",
+            "type": "radio",
+            "instructions": "What color should the content be? Base this on the image you are using.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "dark : Dark",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_58db9810a6c55",
+            "label": "Image Vertical Position",
+            "name": "image_position_vertical",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50%",
+                "class": "alignright",
+                "id": ""
+            },
+            "default_value": 50,
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": "",
+            "max": 100,
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58db957bbafe0",
+            "label": "Image Horizontal Position",
+            "name": "image_position_horizontal",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50%",
+                "class": "alignright",
+                "id": ""
+            },
+            "default_value": 50,
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": "",
+            "max": 100,
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58db9531bafdf",
+            "label": "Cover Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58db9ba30eed8",
+            "label": "Cover Text",
+            "name": "cover_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_58dba5298f562",
+            "label": "Cover Text Vertical Alignment",
+            "name": "cover_text_vertical_alignment",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Top",
+                "middle": "Middle",
+                "bottom": "Bottom"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "Middle",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_58db9bdb0eed9",
+            "label": "Cover Button",
+            "name": "cover_button",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes"
+            },
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "allow_custom": 0,
+            "save_custom": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_58db9c130eeda",
+            "label": "Cover Button Text",
+            "name": "cover_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58db9bdb0eed9",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58db9c2c0eedb",
+            "label": "Cover Button URL",
+            "name": "cover_button_url",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58db9bdb0eed9",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "location"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1501667236
+}

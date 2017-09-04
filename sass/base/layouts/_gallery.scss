@@ -1,0 +1,75 @@
+.gallery {
+	ul {
+		// Set up the grid
+		@include add-grid( $grid );
+		@include add-gutter( $gutter );
+		@include sgs-change('output', 'float');
+		li {
+			// @include border-box;
+			display: inline-block;
+
+			@include breakpoint( $tablet ) {
+				&:nth-of-type(3n+1) {
+					@include grid-span(8, 1);
+				}
+				&:nth-of-type(3n+2) {
+					@include grid-span(8, 9);
+				}
+				&:nth-of-type(3n+3) {
+					@include grid-span(8, 17);
+				}
+			}
+			a {
+				border-bottom: none;
+				display: block;
+				text-align: center;
+				img {
+					margin: 0 auto;
+					-webkit-filter: grayscale(100%);
+					filter: grayscale(100%);
+					@include transition(all, 0.3s, ease-in-out);
+				}
+				&:hover {
+					img {
+						-webkit-filter: grayscale(0%);
+						filter: grayscale(0%);
+					}
+				}
+			}
+		}
+	}
+}
+
+ul {
+	@include breakpoint( $tablet ) {
+		@include clearfix;
+		&.post-count-1 {
+			li {
+				@include grid-span(24, 1);
+			}			
+		}
+		&.post-count-2 {
+			li {
+				&:nth-of-type(1) {
+					@include grid-span(12, 1);
+				}
+				&:nth-of-type(2) {
+					@include grid-span(12, 13);
+				}
+			}
+		}
+		&.post-count-3 {
+			li {
+				&:nth-of-type(3n+1) {
+					@include grid-span(8, 1);
+				}
+				&:nth-of-type(3n+2) {
+					@include grid-span(8, 9);
+				}
+				&:nth-of-type(3n+3) {
+					@include grid-span(8, 17);
+				}
+			}			
+		}
+	}
+}

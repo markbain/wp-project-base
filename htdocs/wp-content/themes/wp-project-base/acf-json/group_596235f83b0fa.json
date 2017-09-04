@@ -1,0 +1,63 @@
+{
+    "key": "group_596235f83b0fa",
+    "title": "Testimonial content",
+    "fields": [
+        {
+            "key": "field_596235f84061a",
+            "label": "Testimonial (full)",
+            "name": "testimonial_description_detailed",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_596235f8406ad",
+            "label": "Testimonial excerpt",
+            "name": "testimonial_excerpt",
+            "type": "text",
+            "instructions": "A short excerpt of the testimonial, for use on list or archive pages, and for embedding on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonial"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1499608669
+}

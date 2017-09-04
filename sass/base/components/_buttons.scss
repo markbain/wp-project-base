@@ -1,0 +1,105 @@
+// Buttons
+.button {
+	// @include border-radius($input-border-radius);
+	// padding: $input-padding;
+	display: inline-block;
+	text-align: center;
+	&:link, &:visited {
+		color: $color_button;	
+		background: $color_background-button;
+		text-decoration: none;
+		border-bottom: none;
+	}		
+	&:hover {
+		color: $color_button-hover;	
+		background: $color_background-button-hover;
+		text-decoration: none;
+		border-bottom: none;
+	}
+	&:active {
+		color: $color_button-active;	
+		background: $color_background-button-active;
+		text-decoration: none;
+		border-bottom: none;	
+	}
+}
+
+.button- {
+	&-small {			
+		margin: 0 0 5px 0;
+		@include breakpoint( $tablet ) {
+			padding: 5px 10px;
+		}
+	}
+}
+@mixin button( $color:default, $size:default ) {
+
+	// Vars
+	$background-color: $color_background-button !default;
+	$shadow-color: $black !default;
+
+	// Global
+
+	display: inline-block;
+	text-align: center;
+	border-bottom: none;
+	&:link, &:visited, &:hover, &:active {
+		text-decoration: none;
+		border-bottom: none;
+	}
+
+	// Color
+
+	@if( $color == default ) {
+		$background-color: $color_background-button;
+	} @else {
+		$background-color: $color;
+	}
+	color: $bright-white;
+	background-color: $background-color;
+	&:link, &:visited {
+		color: $bright-white;
+		background-color: $background-color;
+	}
+	&:hover {
+		color: $bright-white;
+		background-color: mix( $background-color, $shadow-color, 90% );
+	}
+	&:active {
+		color: $bright-white;	
+		background-color: mix( $background-color, $shadow-color, 80% );
+	}	
+
+	// Size
+	@if( $size == peta ) {
+		padding: $input-padding-peta;
+	} @else if( $size == giga ) {
+		padding: $input-padding-giga;
+	} @else if( $size == mega ) {
+		padding: $input-padding-mega;
+	} @else if( $size == kilo ) {
+		padding: $input-padding-kilo;
+	} @else if( $size == default ) {
+		font-size: 1rem;
+		padding: $input-padding-default;
+	} @else if( $size == micro ) {
+		font-size: 1rem;
+		padding: $input-padding-micro;
+	} @else if( $size == nano ) {
+		font-size: 1rem;
+		padding: $input-padding-nano;
+	} @else if( $size == pico ) {
+		font-size: 1rem;
+		padding: $input-padding-pico;
+	}
+
+}
+
+.button-pico { @include button( 'default', 'pico' ); }
+.button-nano { @include button( 'default', 'nano' ); }
+.button-micro { @include button( 'default', 'micro' ); }
+.button { @include button(); }
+.button-kilo { @include button( 'default', 'kilo' ); }
+.button-mega { @include button( 'default', 'mega' ); }
+.button-giga { @include button( 'default', 'giga' ); }
+.button-peta { @include button( 'default', 'peta' ); }

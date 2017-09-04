@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+html, 
+body {
+	min-height: 100%; 
+
+}
+
+/* Menu */
+
+ul.nav-menu li a {
+	padding: 5px $side-padding;
+}
+
+
+
+
+/* Search */
+
+input[type="search"] {
+		// color:  $white; // Input color
+		background: transparent;
+   		border-width: 0;
+    	padding: $block-padding;
+	}
+
+
+::-webkit-input-placeholder {
+   color: rgba(0,0,0,.4);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+
+#work-categories {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.archive.tax-type .cover {
+	padding-bottom: 3em;
+}
+
+.home #main-navigation-menu ul,
+.home #search-toggle {
+	z-index: 2;
+}
+
+.home #main-navigation-menu > ul {
+	position: relative;
+}

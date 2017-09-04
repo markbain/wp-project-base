@@ -1,0 +1,13 @@
+#masthead {
+	.container {
+		max-width: $container-width_medium;
+		.site-branding {
+			.site-logo {
+				text-align: center;
+			}
+		}
+		.hidden-search, #search-toggle {
+			display: none;
+		}
+	}
+}

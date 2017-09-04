@@ -1,0 +1,50 @@
+{
+    "key": "group_5888b0396c10a",
+    "title": "Page Intro",
+    "fields": [
+        {
+            "key": "field_5888b04dbac5a",
+            "label": "Page Intro Text",
+            "name": "page_intro_text",
+            "type": "wysiwyg",
+            "instructions": "Enter an intro paragraph for this page. It will appear first and be given special emphasis!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1491561340
+}

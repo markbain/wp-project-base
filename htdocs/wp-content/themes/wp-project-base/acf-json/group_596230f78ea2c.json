@@ -1,0 +1,150 @@
+{
+    "key": "group_596230f78ea2c",
+    "title": "Project details",
+    "fields": [
+        {
+            "key": "field_596230f7932a0",
+            "label": "Project image",
+            "name": "project_image",
+            "type": "image",
+            "instructions": "A thumbnail image for this item.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_596230f79335c",
+            "label": "Project completion date",
+            "name": "project_date",
+            "type": "date_picker",
+            "instructions": "The date this item was completed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_596230f793416",
+            "label": "Project client",
+            "name": "project_client",
+            "type": "text",
+            "instructions": "The name of the client for this project. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_596230f793504",
+            "label": "Project client URL",
+            "name": "project_client_url",
+            "type": "url",
+            "instructions": "Provide a link here if you want to link to an external site. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_596f14d38b18d",
+            "label": "Project client class",
+            "name": "project_client_class",
+            "type": "text",
+            "instructions": "Add a special class to the client link for a custom icon!\r\nNote: only works for \"etsy\" :)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_597c5fcb0e0fd",
+                        "operator": "==",
+                        "value": "Featured?"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_597c5fcb0e0fd",
+            "label": "Featured",
+            "name": "project_featured",
+            "type": "true_false",
+            "instructions": "Featured projects are given special prominence in the theme.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1503916809
+}

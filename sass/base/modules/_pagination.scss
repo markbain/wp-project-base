@@ -1,0 +1,72 @@
+#paging-navigation {
+	// background-color: lighten( $grey, 3% );
+	.nav-links {
+		@include clearfix;
+	}
+}
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	overflow: hidden;
+}
+
+.comment-navigation,
+.paging-navigation,
+.post-navigation {
+	.read-more a {
+		border: none;
+		.post-nav-label {
+			display: table;
+			width: 100%;
+			span {
+				vertical-align: middle;
+				display: table-cell;
+				width: 100%;
+			}
+			i {
+				display: table-cell;
+				width: auto;
+	  		}
+		}
+	}
+	.nav-previous {
+		float: left;
+		text-align: left;
+		width: 50%;
+		.read-more a {
+			text-align: left;
+			margin: 0;
+			.post-nav-label {
+				i {
+					&:before {
+			  			content: $icon-font-nav-previous;
+		  				padding-right: $icon-font-nav-padding;
+		  			}
+		  		}
+			}
+
+		}
+	}
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+		.read-more {
+			float: right;
+			a {
+				.post-nav-label {
+					i {
+						&:before {
+			  				content: $icon-font-nav-next;
+			  				padding-left: $icon-font-nav-padding;
+			  			}
+			  		}
+			  	}
+			}
+		}
+	}
+}
+
+.post-nav-label {
+	display: block;
+}

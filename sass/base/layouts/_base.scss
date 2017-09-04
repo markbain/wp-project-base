@@ -1,0 +1,185 @@
+/* ==========================================================================
+Layout
+========================================================================== */
+
+html, 
+body,
+#page {
+	height: 100%; /* Important for sticky footer */
+}
+
+.section {
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	@include breakpoint($tablet) {
+		padding-top: $section-padding-top;
+		padding-bottom: $section-padding-bottom;
+		padding-left: $section-padding-left;
+		padding-right: $section-padding-right;
+	}
+	&.section-minor {
+		// These sections don't have the default padding
+		padding: 0;
+		&:first-of-type {
+			padding-top: 3rem;
+		}
+		&:last-of-type {
+			padding-bottom: 3rem;
+		}
+
+		margin: 0;
+		// Set explicit margins to avoid browser defaults
+		& + * {
+			margin-top: 1em;
+			// Add a margin to any adjacent element 
+		}
+	}
+}
+
+.container {
+	
+	position: relative; // Allow absolute positioning of elements
+	max-width: $container-width;
+	padding: 3em 5%;
+
+	@include clearfix; // Likely to contain floated elements i.e. columns
+
+	@include breakpoint( $tablet ) {
+		
+		padding: 0;
+		// Remove padding because... TODO
+
+		margin: 0 auto 2rem auto; 
+		// Center the container on the page.
+		// Separate from any subsequent .container elements
+
+		&:last-of-type {
+			margin-bottom: 0;
+			// Remove the margin from the last element
+		}
+	}
+
+	.section-minor > & {
+		padding: 0;
+	}
+	.gallery_wide > & {
+		padding: 0;
+	}
+
+	&.container_medium {
+		@include breakpoint( $tablet ) {
+			max-width: $container-width_medium;
+		}
+	}
+	&.container_narrow {
+		@include breakpoint( $tablet ) {
+			max-width: $container-width_narrow;
+		}
+	}
+}
+
+/* Sidebars */
+
+
+.right-sidebar, 
+.left-sidebar {
+	&.single-book,
+	&.single-talk,
+	// &.single-project,
+	&.single-article {
+		#content {
+			width: 100%;
+			padding: 0;
+			margin: 0 auto;
+			@include breakpoint($tablet) {
+				padding-top: $section-padding-top;
+				padding-bottom: $section-padding-bottom;
+				padding-left: $section-padding-left;
+				padding-right: $section-padding-right;
+			}
+		}
+		#main {
+			@include breakpoint( $tablet ) {
+				max-width: $container-width;
+							margin: 0 auto;
+				@include clearfix;
+			}
+		}
+	}
+}
+.right-sidebar {
+	&.single-book,
+	&.single-talk,
+	// &.single-project,
+	&.single-article {	
+		#primary, #post-header {
+			@include breakpoint( $tablet ) {
+				@include grid-span(18, 7);
+				padding-left: 0;
+				padding-right: 0;
+				text-align: left;
+				.section {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+		#secondary {
+			@include breakpoint( $tablet ) {
+				@include grid-span(6, 1);
+				padding-left: 0;
+				padding-right: 0;
+				text-align: left;
+				.section {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+
+/* Menu */
+
+ul.nav-menu li a {
+	padding: 5px $side-padding;
+	
+}
+
+/* Search */
+
+input[type="search"] {
+	background-repeat: repeat;
+	border-width: 0;
+	padding: 1em;
+	margin-bottom: 1rem;
+}
+
+a#search-toggle {
+	float: left;
+}
+
+/* Right sidebar */
+
+.media_block {
+	@include clearfix;
+	.media_block-text {
+		width: 100%;
+		@include breakpoint($tablet) {
+
+		}
+
+	}
+	.media_block-image {
+		text-align: center;
+		@include breakpoint($tablet) {
+
+		}
+		img {
+			margin-bottom: 1em;
+			max-width: 66px;
+		}
+	}
+}

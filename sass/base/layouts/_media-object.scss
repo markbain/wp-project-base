@@ -1,0 +1,191 @@
+.media-object {
+	
+	// Stacked internal layout
+	// i.e. .media-object-media appears above .media-object-content
+
+	margin-bottom: 2rem;
+	// This should be greater than the margin between the 
+	// internal elements. 
+
+	&:last-of-type {
+		margin: 0;
+		// Remove the margin from the last element
+		// This will not have the desired effect within a row!
+	}
+
+	.media-object-media {
+
+		margin-bottom: 1rem;
+		// Stacked internal layout requires bottom margin to
+		// separate two main internal elements.
+		// Remove this for side-to-side internal layout!  
+
+		a {
+			@include block-link;
+			// Wrap the image in a display:block link
+		}
+
+		img {
+			width: 100%;
+			// Fill that div!
+		}
+
+
+	}
+
+	.media-object-content {
+		position: relative;
+		overflow: hidden;
+
+
+		header {
+			font-family: $alt2-font-stack;
+			// @extend .font_small !optional;
+			.entry-title {
+				font-family: $alt-font-stack;
+				@extend .h3 !optional;				
+			}
+		}
+		footer {
+			@include breakpoint( $tablet ) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+.media-object-container {
+	@include clearfix;
+	&.full-width {
+		.media-object {
+			@include breakpoint( $tablet ) {
+				@include grid-span(24, 1);
+				@include add-grid( $grid );
+				@include add-gutter( $gutter );
+				@include sgs-change('output', 'float');
+			}
+			.media-object-media {
+				@include breakpoint( $tablet ) {
+					@include grid-span(12, 1);
+				}
+			}
+			.media-object-content {
+				@include breakpoint( $tablet ) {
+					// height: auto !important;
+					@include grid-span(12, 13);
+				}
+			}
+		}
+	}
+
+	&.featured {
+		&-1 {
+			// TODO
+		}
+		&-2 {
+			// TODO
+		}
+		&-3 {
+			@extend %mo-paradigm-2;
+		}
+	}
+
+}
+
+
+/**
+* Media object paradigms
+*/
+
+%mo-paradigm-0 {
+
+	// Single column, internal stacked. Always.
+
+	.media-object {
+		width: 100%;
+		display: block;
+		.media-object-media, .media-object-content {
+			display: block;
+
+			width: 100%;
+			float: none;
+		}
+	}
+}
+
+%mo-paradigm-1 {
+
+	// 1.
+	// Default (mobile)
+	// Single column, internal stacked
+
+	// 2.
+	// tablet +
+	// Single column, internal side-by-side
+	@include breakpoint( $bp-intermediate ) {
+		.media-object {
+			width: 100%;
+			display: table;
+			.media-object-media, .media-object-content {
+				display: table-cell;
+				vertical-align: middle;
+				width: 49%;
+				float: none;
+			}
+			.media-object-media {
+				display: table-cell;
+				float: none;
+				padding-right: 2%;
+			}
+		}
+	}
+}
+
+%mo-paradigm-2 {
+	// 1.
+	// Default (mobile)
+	// Single column, internal stacked
+
+	// 2.
+	// intermediate to wide
+	// Single column, internal side-by-side
+	@include breakpoint( $bp-mm-intermediate ) {
+		.media-object {
+			width: 100%;
+			display: table;
+			.media-object-media, .media-object-content {
+				display: table-cell;
+				vertical-align: middle;
+				width: 49%;
+				float: none;
+			}
+			.media-object-media {
+				display: table-cell;
+				float: none;
+				padding-right: 2%;
+			}
+		}
+	}
+
+	// 3.
+	// wide +
+	// 3 columns, internal stacked
+	@include breakpoint( $bp-wide ) {
+		@include add-grid( $grid );
+		@include add-gutter( $gutter );
+		@include sgs-change('output', 'float');
+		.media-object {
+			&:nth-of-type(3n+1) {
+				@include grid-span(8, 1);
+			}
+			&:nth-of-type(3n+2) {
+				@include grid-span(8, 9);
+			}
+			&:nth-of-type(3n+3) {
+				@include grid-span(8, 17);
+			}
+		}
+	}
+}

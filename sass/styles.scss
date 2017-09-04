@@ -1,0 +1,45 @@
+/*!
+	Theme Name: WP Project Base
+	Description: Bespoke WordPress theme for WP Project Base
+	Author: Mark Bain Design
+	Author URI: http://markbaindesign.com/
+	Version: 0.0.0
+	License: GNU General Public License v2.0
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: _baindesign
+	Domain Path: /languages/
+*/
+
+// Primary variables
+// Here we assign values to variables
+// e.g. 
+// variable + value
+// $white: #fff ;
+
+@import "theme_wp_project_base/vars/vars"; // 1
+@import "base/vars/vars"; // 1
+
+// Secondary variables
+// These are where we assign previously set value variables to other variables
+// This is separated so we can use base primary variables in our theme
+// e.g. 
+// variable + variable
+// $color-button: $white;
+
+@import "theme_wp_project_base/vars2/vars2";
+@import "base/vars2/vars2";
+
+// Vendor/Third-party styles
+@import "vendor/vendor";
+
+// Base variables
+@import "base/base";
+
+// Themes
+@import "theme_wp_project_base/theme"; // 3
+
+// ======= Footnotes ======= //
+
+// 1. Due to !default declaration, theme vars overrule base vars and 3rd party
+// 2. Base vars overrule 3rd party
+// 3. Change this to your theme folder

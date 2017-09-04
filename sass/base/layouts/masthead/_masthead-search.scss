@@ -1,0 +1,59 @@
+.js #masthead {
+	// Only show toggle if js is active and menu is hidden
+	#search-toggle {
+		display: block;				
+		@include breakpoint( $tablet ){
+			
+			&.default {
+				// display: table;
+				// position: absolute;
+				// top: 0;
+				// right: 0;
+				width: $search-toggle-width; 
+				height: 59px; 
+				&::before {
+					font-family: 'FontAwesome';
+					content: '\f002'; //  fa-search
+					display: table-cell;
+					text-align: center;
+					vertical-align: middle;
+					color: $color_text-anchor;
+				}
+			}
+
+		}
+	}
+	&.js-search-active {
+		#search-toggle {
+			// background-image: $svg-bg;
+			background-repeat: repeat;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	// Search toggle as menu item
+	// Add this class to a menu item to get the search toggle with icon
+	li.menu-item-search-toggle {
+		display: none; // If search is shown on mobile, don't show the toggle
+		@include breakpoint( $tablet ) {
+			display: inline-block;
+		}
+		a {
+			> span {
+				> span {
+					display: relative;
+					// @extend .visuallyhidden; // Hide the label visually
+				}
+				&:after {
+					font-family: 'FontAwesome';
+					content: '\f002'; // fa-search
+					display: inline-block;
+					text-align: center;
+					vertical-align: middle;
+					color: $color_text-anchor;
+					margin: -5px 0 0 5px; // Manual adjustment
+				}
+			}
+		}
+	}
+}

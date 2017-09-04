@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+	.container {
+		@include breakpoint( $tablet ) {
+			@include add-grid(24);
+			@include sgs-change('output', 'isolation');
+		}
+	}
+	ul {
+		@extend %no-bullets !optional;
+		text-align: center; /* 1 */
+		@include breakpoint( $tablet ) {
+			text-align: left;
+		}
+		li {
+			text-align: center;
+		}
+		&.site-info {
+			margin-bottom: 2rem;
+			@include breakpoint( $tablet ) {
+				margin-bottom: 0;
+			}
+			li {
+				padding: 1rem;
+				@include breakpoint( $tablet ) {
+					padding: 0;
+				}
+			}
+		}
+	}
+	
+
+	
+}
+#back-to-top {
+	margin-bottom: 1rem;
+	font-size: ms(2); 
+	i::before {
+		content: '\f176';
+	}
+	a {
+		border-bottom: none;
+	}
+	@include breakpoint( $tablet ){	
+		position: absolute;
+		text-align: right;
+		right: 0;
+		top: 0;
+	}
+}
+
+#signup {
+	
+	h2 {
+		margin-top: .5em;
+		i {
+			&.fa-envelope {
+				display: block;
+				@include breakpoint( $tablet ) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+#footer-navigation {
+	// A menu in the footer
+
+	// TODO Rename section to "pre-footer"
+	@extend %remove-top-bottom-padding;
+	@include light-text-dark-bg;
+	background-color: $color-primary-tinted;
+	.menu {
+		@include center-block;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		// border-bottom: 1px solid darken( $grey, 14% );
+		li {
+			&:hover {
+				background-color: $color-primary-shaded;
+			}
+		}
+	}
+}
+
+
+#footer-logo {
+	padding: $block-padding;
+	margin-bottom: 1em;
+	@include breakpoint( $tablet ) {
+		padding: 0;
+		margin-bottom: 0;
+	}
+	img {
+		width: 100%;
+		max-width: 230px;
+		opacity: .2;
+	}
+}
+
+// ======= Footnotes ======= //
+
+// 1. Although everything is already aligned center by default, 
+// lists are aligned *left* globally.
