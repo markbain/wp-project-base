@@ -1,0 +1,131 @@
+body {
+	color: $color-neutral-2-super-shaded;
+}
+
+a {
+    background-image: linear-gradient(to bottom, transparent 0, $color-primary-super-tinted 1px, transparent 0);
+
+	&:link {
+		color: $color-primary-tinted;
+
+	}
+	&:visited {
+		color: $color-primary-tinted;
+	}
+	&:hover {
+		color: $color-primary-super-shaded;
+	    background-image: linear-gradient(to bottom, transparent 0, $color-primary-tinted 1px, transparent 0);
+	}
+
+	&.button-* {
+		background-image: none;
+	}
+}
+
+#masthead,
+#masthead *,
+#colophon {
+	@include light-text-dark-bg;
+	background-color: $color-neutral-2;
+}
+
+.event-dates {
+	@extend .meta;
+}
+
+#offcanvas-main-nav {
+	&.mm-menu {
+		background-color: $color_neutral-2;
+		.mm-panel.mm-hasnavbar .mm-navbar {
+			background-color: $color_neutral-2-tinted;
+		}
+		.mm-listview {
+			font-size: ms(3);
+			& > li > a {
+				padding: 1em;
+			}
+			&>li:not(.mm-divider):after {
+				border-bottom: none;
+			}
+			.mm-next {
+				&:before {
+					border-left: none;
+				}
+				&:after{
+					border-color: $color-secondary-1;
+				}
+			}
+		}
+		a {
+			background-image: none; // remove gradient underline effect
+			color: $color-secondary-1;
+		}
+	}
+}
+
+.single-book {
+	#secondary {
+		text-align: center; 
+		@include breakpoint( $tablet ) {
+			text-align: left;
+		}
+		ul li {
+			text-align: center;
+			@include breakpoint( $tablet ) {
+				text-align: left;
+			}
+		}
+		img {
+			max-width: 75%;
+			@include breakpoint( $tablet ) {
+				max-width: 100%;
+			}
+		}
+	}
+}
+#post-header {
+	.page-title {
+		margin-bottom: 0;
+		& + .intro {
+			margin: 0 auto;
+			margin-top: 1.5rem;
+			max-width: $container-width_narrow;
+		}
+	}
+
+	.post-author,
+	.post-date {
+		.single-book &,
+		.single-talk &,
+		.single-project &,
+		.single-article &,
+		.page & {
+			display: none;
+		}
+	}
+}
+
+.posts-not-featured {
+	background-color: $color-secondary-1-super-tinted;
+	.media-object {
+		margin-bottom: $section-padding-bottom;
+	}
+	.media-object-media {
+		margin-bottom: 0;
+		.post-type-archive-article & {
+			@extend .visuallyhidden;
+		}
+	}
+	.entry-title {
+		.post-type-archive-project & {
+			@extend .visuallyhidden;
+		}
+	}
+	a {
+		.post-type-archive-project & {		
+		   	pointer-events: none; // Disable links
+	   		cursor: default; // Disable links
+	   		filter: grayscale(100%);	
+		}
+	}
+}
