@@ -44,12 +44,14 @@ function _mbbasetheme_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'mbbasetheme' ),
 	) );
+	/*
 	register_nav_menus( array(
 		'footer' => __( 'Footer Menu', 'mbbasetheme' ),
 	) );
 	register_nav_menus( array(
 		'work' => __( 'Work Menu', 'mbbasetheme' ),
 	) );
+	*/
 
 	// Register Widget Areas
 	// Function location: /functions/theme-functions.php

@@ -14,15 +14,15 @@ if ( ! function_exists( 'baindesign324_featured_cpt' ) ) :
 
 		$post_date = '';
 		
-		if ( is_post_type_archive( 'testimonial' ) ) {
+		if ( $post_type == 'testimonial' ) {
 			$post_date = 'testimonial_date'; 
-		} elseif ( is_post_type_archive( 'book' ) ) {
+		} elseif ( $post_type == 'book' ) {
 			$post_date = 'book_date'; 
-		} elseif ( is_post_type_archive( 'talk' ) ) {
+		} elseif ( $post_type == 'talk' ) {
 			$post_date = 'talk_date'; 
-		} elseif ( is_post_type_archive( 'project' ) ) {
+		} elseif ( $post_type == 'project' ) {
 			$post_date = 'project_date'; 
-		} elseif ( is_post_type_archive( 'article' ) ) {
+		} elseif ( $post_type == 'article' ) {
 			$post_date = 'article_date';
 		}
 
