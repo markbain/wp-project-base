@@ -19,6 +19,23 @@
             "endpoint": 0
         },
         {
+            "key": "field_5a1599c738cb7",
+            "label": "Welcome Message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h1>Welcome to the Theme Settings.<\/h1>\r\nHere you can customize archive page settings.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_597b5d2fa2132",
             "label": "Posts",
             "name": "",
@@ -510,5 +527,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1501759904
+    "modified": 1511365167
 }
