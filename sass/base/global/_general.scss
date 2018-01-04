@@ -38,9 +38,9 @@ body {
 	background: $color_text-selection;
 }
 
-header, p, ul, ol {
-	margin: 0 0 1.15em 0;
-	// Set explicit margins for everything to avoid browser defaults
+header, h1, h2, h3, h4, h5, h6, p, ul, ol, form, table {
+	margin: 0 0 1rem 0;
+	// Set explicit margins to avoid browser defaults
 }
 
 i {
@@ -79,21 +79,6 @@ a {
     	padding-left: $icon-font-nav-padding; 
 	}
 
-	&.medium:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f23a'; // &rarr;
-	}
-	&.linkedin:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f0e1'; // &rarr;
-	}
-	&.etsy:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f2d7'; // &rarr;
-	}
 }
 
 %light-links {

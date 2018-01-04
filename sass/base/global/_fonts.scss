@@ -63,7 +63,10 @@ body{ font-size: ms(1);
 	}
 }
 .h1 {
-	font-size: 3.5rem;
+	font-size: ms(7);
+	.cover & {
+		font-size: ms(10);
+	}
 }
 
 .h6-reset {

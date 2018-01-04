@@ -245,7 +245,7 @@ module.exports = function(grunt) {
             },
             readme: {
                 options: {
-                    prefix: 'Version\ \s*'
+                    prefix: 'Version\\:\\s'
                 },
                 src: [ '<%= rdm %>' ],
             },
@@ -266,10 +266,10 @@ module.exports = function(grunt) {
                         'autoprefixer'
                     ]
             },
-            js: {
+            /*js: {
                 files: '<%= jshint.all %>',
                 tasks: ['jshint']
-            },
+            },*/
             img: {
                 files: ['<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/src/*.{png,jpg,jpeg,gif,webp,svg}'],
                 tasks: [

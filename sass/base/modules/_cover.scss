@@ -5,12 +5,12 @@
 	&.cover-background-image {
 		/* If there is a background image, set height so when 
 		content is hidden on mobile, we still see the image */
-		height: 200px;
+		height: 200px; /* Magic number */
 	}
 
 	@include breakpoint( $tablet ) {
-		padding-top: 150px;
-		min-height: 500px;
+		padding-top: 150px; /* Magic number */
+		min-height: 500px; /* Magic number */
 		display: table;
 	}
 
@@ -90,6 +90,7 @@
 }
 
 .home .cover {
+	/* Magic number */
 	// margin-top: -10px; // By adjusting this, you can break the grid!
 	.media-object {
 		border: none;
