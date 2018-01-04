@@ -9,6 +9,8 @@ import
 node_modules
 release
 releases
+theme # symlink to theme folder
+plugin # symlink to plugin folder
 
 htdocs/wp-content/themes/wp-project-base/assets/js/dist/custom/modernizr-custom.js
 
