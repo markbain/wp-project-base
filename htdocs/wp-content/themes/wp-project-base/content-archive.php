@@ -19,10 +19,10 @@
 	$is_featured_custom_field = $post_type . '_featured';
 	$is_featured = get_field( $is_featured_custom_field );
 
-	if ( ( $is_featured == FALSE && $post_link_external == TRUE ) ) {
-		$post_link = $post_link_external; // Featured posts always link internal
+	if ( ( $is_featured == TRUE || $post_type == 'book' ) ) {
+		$post_link = $post_link_internal; // Featured posts always link internal
 	} else {
-		$post_link = $post_link_internal;
+		$post_link = $post_link_external;
 	}
 
 
@@ -61,7 +61,15 @@
 			$media_object_media_content .= '<article class="media-object-content" style="width: 100%;">';
 		}
 		echo $media_object_media_content;
-
+	
+	/**
+	 *	Talk pre-header 
+	 **/
+	if ( $post_type == 'talk' ) {
+		$client = get_field( 'talk_client' );
+		echo '<div class="talk-preheader">' . $client . '</div>';
+	}
+	
 	/**
 	 * Post Header
 	 */

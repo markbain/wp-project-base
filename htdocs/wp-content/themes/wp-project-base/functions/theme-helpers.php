@@ -188,3 +188,19 @@ function mbdmaster_adjust_cpt_offset_pagination($found_posts, $query) {
     return $found_posts;
 }
 add_filter('found_posts', 'mbdmaster_adjust_cpt_offset_pagination', 1, 2 );
+
+/**
+ * Order category archives by date custom field
+ */
+
+function baindesign_order_cat_archives_by_date( $query ) {
+
+    if ( $query->is_main_query() && ( is_tax( 'publication' ) ) ) {
+
+       $query->set( 'meta_key', 'article_date' );
+       $query->set( 'orderby', 'meta_value_num' );
+       $query->set( 'order', 'DESC' );
+   }
+
+}
+add_filter( 'pre_get_posts', 'baindesign_order_cat_archives_by_date' );

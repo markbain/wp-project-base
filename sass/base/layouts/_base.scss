@@ -14,9 +14,16 @@ body,
 	margin: 0 auto;
 	@include breakpoint($tablet) {
 		padding-top: $section-padding-top;
-		padding-bottom: $section-padding-bottom;
 		padding-left: $section-padding-left;
 		padding-right: $section-padding-right;
+		&:last-of-type {
+			padding-bottom: $section-padding-bottom;
+		}
+		&__background {
+			// To be added if the section has a different background
+			// to the surrounding secions.
+			padding-bottom: $section-padding-bottom;
+		}
 	}
 	&.section-minor {
 		// These sections don't have the default padding
